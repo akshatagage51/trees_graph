@@ -1,0 +1,12 @@
+This repository consist of programs realted to Trees and Graphs
+
+In trees, The Binary search tree, AVL tree and the Red Black tree is implemented
+And in graphs, basic creation of graph with adjacency list has been implemented.
+To find a minimal spanning tree two greedy algorithms are implemented.
+
+Kruskals algorithm is implemented by adjacency list
+and
+Prims algorithm is implemented by adjacency matrix.
+
+Dijikstras algorithm is also implemented which is used to find the shortest path in a graph.
+
