@@ -1,0 +1,19 @@
+In this folder dijikstra's algorithm is implemented.
+It is also called Single source shortest path.
+
+Here source vertex is given to us & we have to find the smallest path 
+from these vertex to every other vertex.
+
+This algorithm works both on directed and undirected graph as long as
+weight is non negative no.
+
+The include folder consist of the header file.
+source folder consist of library.
+test folder consist of main file.
+
+To run the program just do 
+make
+and then run the executable 
+./main
+
+

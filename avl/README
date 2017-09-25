@@ -1,0 +1,22 @@
+This folder has the avl tree implementation
+
+The include folder has header file for avl.h
+The source folder consist of library for avl 
+and the test folder has main file
+
+Here while inserting a new node we have to make sure our propert of avl tree 
+does not voilate.
+Property of avl tree is the difference between the height of left subtree and right subtree 
+should not be greater than 1.
+
+If this property voilates we have to make left and right rotations based on the problem.
+
+Library consist two main functions 
+1. insert
+2. delete_node
+
+To run the program just do 
+make
+and then run the executable 
+./main
+

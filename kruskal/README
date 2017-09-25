@@ -1,0 +1,21 @@
+This folder consist of kruskals algorithm
+This algorithm is used to find minimal spanning tree of a graph.
+
+Steps to find MST using kruskals algorithm
+1.Remove all loops.
+2.Remove all parallel edges.
+3.Select the minimum edge.
+4.If all the vertices are covered then stop there.
+
+The include folder consist of the header file.
+source folder consist of library.
+test folder consist of main file.
+
+In this program I am creating a graph with cost associated with each vertices 
+Then I am finding the minimal spanning tree.
+
+To run the program just do 
+make
+and then run the executable 
+./main
+

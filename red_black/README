@@ -1,0 +1,17 @@
+This folder consist implementation of Red_black tree
+Red_black tree is a self balancing tree.
+
+Property of Red_black tree
+1.Root should always be Black.
+2.Red should have only black child
+3.Black can have both Red and Black child
+
+The include folder consist of the header file.
+source folder consist of library.
+test folder consist of main file.
+
+To run the program just do 
+make
+and then run the executable 
+./main
+ 

@@ -1,0 +1,19 @@
+This repository is based on Binary search tree.
+The property of binary search tree is the left child should be smaller then the parent node
+and the right child should be greater then the parent node.
+
+This repository consist of include folder, source folder, test folder.
+include folder consist of the header file.
+source folder consist of library.
+test folder consist of main file.
+
+The library contains three main folders 
+1.insert_into_bst
+2.search_into_bst
+3.delete_into_bst
+
+To run the program just do 
+make
+and then run the executable 
+./main
+

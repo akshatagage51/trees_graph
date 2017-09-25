@@ -1,0 +1,14 @@
+This folder consist of implementation of prims algorithm.
+
+Prim’s Algorithm is an approach to determine minimum cost spanning tree. 
+In this case, we start with single edge of graph and we add edges to it 
+and finally we get minimum cost tree. 
+
+The include folder consist of the header file.
+source folder consist of library.
+test folder consist of main file.
+
+To run the program just do 
+make
+and then run the executable 
+./main
