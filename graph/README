@@ -1,0 +1,15 @@
+This folder consist of implementation of graph by linklist
+The include folder has header file for graph.h
+The source folder consist of library for graph 
+and the test folder has main file
+
+This program tells us how to create a graph by linklist.
+Here first we have to create a linklist by entering the source and destination of edges 
+
+And then connect the edges to make a graph.
+
+First we have to use make command to generate executable
+make
+and to run the executable do
+./main
+
