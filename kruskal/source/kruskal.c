@@ -1,5 +1,5 @@
 #include"kruskal.h"
-
+/*function create a tree*/
 struct edge *create_tree(struct edge *tree, int vertices, struct edge *front)
 {
 	struct edge *temp;
@@ -38,7 +38,7 @@ struct edge *create_tree(struct edge *tree, int vertices, struct edge *front)
 	}
 	return tree;
 }
-
+/*function to check whether tree is empty or not*/
 int empty_list(struct edge *front)
 {
 	if(front == NULL)
@@ -46,7 +46,7 @@ int empty_list(struct edge *front)
 	else
 		return 0;
 }
-
+/*function to create a linklist*/
 struct edge *insert_node(int src, int dest, int wt, struct edge *front)
 {
 	struct edge *temp, *q;
@@ -75,7 +75,7 @@ struct edge *insert_node(int src, int dest, int wt, struct edge *front)
 	}
 	return front;
 }
-
+/*function to create a graph by adjacency list*/
 struct edge *create_graph(int vertices, int no_edge, struct edge *front)
 {
 	int i, source_vertex, dest_vertex, weight;
@@ -93,7 +93,7 @@ struct edge *create_graph(int vertices, int no_edge, struct edge *front)
 	}
 	return front;
 }
-
+/*function to print the graph*/
 void print(struct edge *tree, int vertices)
 {
 	int i;

@@ -1,11 +1,11 @@
 #include"red_black.h"
-void insert (int ikey/*,struct node *root, struct node *sentinel */)
+void insert (int ikey)
 {
 	struct node *tmp, *ptr, *par;
- 
+
 	par = sentinel;
 	ptr = root;
- 
+
 	while( ptr != sentinel )
 	{
 		par = ptr;
@@ -25,31 +25,30 @@ void insert (int ikey/*,struct node *root, struct node *sentinel */)
 	tmp->rchild = sentinel;
 	tmp->color = red;
 	tmp->parent = par;
- 
+
 	if(par==sentinel)
 		root = tmp;
 	else if(tmp ->info < par->info )
 		par->lchild = tmp;
 	else
 		par->rchild = tmp;
- 
-	insert_balance(tmp/*,root,sentinel*/);
-	//return root;
-}/*End of insert( )*/
- 
-void insert_balance(struct node *nptr/*,struct node *root,struct node *sentinel */)
+
+	insert_balance(tmp);
+}
+
+void insert_balance(struct node *nptr)
 {
 	struct node *uncle, *par, *grandPar;
- 
+
 	while( nptr->parent->color == red )
 	{
 		par = nptr->parent;
 		grandPar = par->parent;
- 
+
 		if( par == grandPar->lchild )
 		{
 			uncle = grandPar->rchild;
- 
+
 			if(uncle->color == red )	/* Case L_1 */
 			{
 				par->color = black;
@@ -99,20 +98,18 @@ void insert_balance(struct node *nptr/*,struct node *root,struct node *sentinel 
 		}
 	}
 	root->color = black;
-//	return root;
-}/*End of insert_balance()*/
- 
- 
+}
+
 void RotateLeft(struct node *pptr)
 {
 	struct node *aptr;
- 
+
 	aptr = pptr->rchild;	/*aptr is right child of pptr*/
 	pptr->rchild= aptr->lchild;
- 
+
 	if(aptr->lchild !=sentinel)
         aptr->lchild->parent = pptr;
- 
+
 	aptr->parent = pptr->parent;
  
 	if(pptr->parent == sentinel )
@@ -123,32 +120,29 @@ void RotateLeft(struct node *pptr)
 		pptr->parent->rchild = aptr;
     aptr->lchild = pptr;
 	pptr->parent = aptr;
-}/*End of RoatateLeft( )*/
- 
+}
 void RotateRight(struct node *pptr)
 {
 	struct node *aptr;
- 
+
 	aptr = pptr->lchild;
 	pptr->lchild= aptr->rchild;
- 
+
 	if(aptr->rchild !=sentinel )
         aptr->rchild->parent = pptr;
- 
+
 	aptr->parent = pptr->parent;
- 
+
 	if(pptr->parent == sentinel )
 		root = aptr;
 	else if( pptr == pptr->parent->rchild )
 		pptr->parent->rchild = aptr;
 	else
 		pptr->parent->lchild = aptr;
- 
+
 	aptr->rchild = pptr;
 	pptr->parent = aptr;
-}/*End of RotateRight( )*/
- 
- 
+}
 void display(struct node *ptr,int level)
 {
 	int i;
@@ -165,5 +159,4 @@ void display(struct node *ptr,int level)
 			printf("B");
 		display(ptr->lchild, level+1);
 	}
-}/*End of display()*/
-
+}

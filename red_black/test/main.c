@@ -15,7 +15,7 @@ int main()
 			case 1:
 				printf("\nenter the number to be inserted\n");
 				scanf("%d",&num);
-				insert(num/*,root,sentinel*/);
+				insert(num);
 				break;
 			case 2:
 				display(root,0);

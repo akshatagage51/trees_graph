@@ -3,7 +3,7 @@
 int prim(int n)
 {
 	int i, j, startVertex, endVertex;
-   	int k, nr[10], temp,minimumcost=0;
+   	int k, arr[10], temp,minimumcost=0;
 
    /* For first smallest edge */
 	temp = cost[0][0];
@@ -26,20 +26,20 @@ int prim(int n)
 	minimumcost = temp;
 
    /* Now we have to find min dis of each vertex from either
-    startVertex or endVertex by initialising nr[] array
+    startVertex or endVertex by initialising arr[] array
     */
 
 	for (i = 0; i < n; i++)
 	{
 		if (cost[i][startVertex] < cost[i][endVertex])
-         		nr[i] = startVertex;
+         		arr[i] = startVertex;
       		else
-         		nr[i] = endVertex;
+         		arr[i] = endVertex;
    	}
 
-   /* To indicate visited vertex initialise nr[] for them to 100 */
-	nr[startVertex] = 100;
-	nr[endVertex] = 100;
+   /* To indicate visited vertex initialise arr[] for them to 100 */
+	arr[startVertex] = 100;
+	arr[endVertex] = 100;
 
    /* Now find out remaining n-2 edges */
 	temp = 99;
@@ -47,19 +47,19 @@ int prim(int n)
 	{
 		for (j = 0; j < n; j++)
 		{
-			if (nr[j] != 100 && cost[j][nr[j]] < temp)
+			if (arr[j] != 100 && cost[j][arr[j]] < temp)
 			{
-            			temp = cost[j][nr[j]];
+            			temp = cost[j][arr[j]];
             			k = j;
          		}
       		}
 	}
       /* Now i have got next vertex */
 	tree[i][0] = k;
-	tree[i][1] = nr[k];
-	tree[i][2] = cost[k][nr[k]];
-	minimumcost = minimumcost + cost[k][nr[k]];
-	nr[k] = 100;
+	tree[i][1] = arr[k];
+	tree[i][2] = cost[k][arr[k]];
+	minimumcost = minimumcost + cost[k][arr[k]];
+	arr[k] = 100;
 
       /* Now find if k is nearest to any vertex
        than its previous near value */
@@ -67,11 +67,11 @@ int prim(int n)
 
 	for (j = 0; j < n; j++)
 	{
-		if (nr[j] != 100 && cost[j][nr[j]] > cost[j][k])
-            	nr[j] = k;
+		if (arr[j] != 100 && cost[j][arr[j]] > cost[j][k])
+            	arr[j] = k;
       	}
       	temp = 99;
-printf("\nThe min spanning tree is:- ");
+/*printf("\nThe min spanning tree is:- ");
         for (i = 0; i < n - 1; i++)
         {
                 for (j = 0; j < 3; j++)
@@ -80,7 +80,7 @@ printf("\nThe min spanning tree is:- ");
         }
         printf("\nMin cost : %d", minimumcost);
 
-
+*/
 	return minimumcost;
 }
 
