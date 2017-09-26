@@ -71,16 +71,6 @@ int prim(int n)
             	arr[j] = k;
       	}
       	temp = 99;
-/*printf("\nThe min spanning tree is:- ");
-        for (i = 0; i < n - 1; i++)
-        {
-                for (j = 0; j < 3; j++)
-                        printf("%d", tree[i][j]);
-                printf("\n");
-        }
-        printf("\nMin cost : %d", minimumcost);
-
-*/
 	return minimumcost;
 }
 
